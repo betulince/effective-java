@@ -1,0 +1,46 @@
+# Ignore IntelliJ IDEA project files
+.idea/
+*.iml
+
+# Ignore build output directories
+/out/
+build/
+target/
+
+# Ignore logs
+*.log
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE-specific files
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore Java-specific files
+*.class
+*.jar
+*.war
+*.ear
+
+# Ignore Maven specific files
+.mvn/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Ignore Gradle specific files
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Ignore distribution directory
+dist/
