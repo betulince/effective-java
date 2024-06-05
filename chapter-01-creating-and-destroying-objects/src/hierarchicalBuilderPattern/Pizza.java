@@ -20,7 +20,7 @@ public abstract class Pizza {
         SAUSAGE
     }
 
-    // holds the toppings of a particular pizza instance
+    // Holds the toppings of a particular pizza instance
     final Set<Topping> toppings;
 
     /***
