@@ -1,4 +1,4 @@
-public class StaticFactoryMethodExampleClass {
+public class StaticFactoryMethod {
 
     public static Boolean valueOf(boolean b) {
         // Static factory method which is simply a static method that returns an instance of the class
@@ -13,7 +13,7 @@ public class StaticFactoryMethodExampleClass {
     public static void main(String[] args) {
         boolean b = true;
 
-        Boolean result = StaticFactoryMethodExampleClass.valueOf(b);
+        Boolean result = StaticFactoryMethod.valueOf(b);
         Class<? extends Boolean> resultType = result.getClass();
 
         System.out.println("Type of result: " + resultType.getName());

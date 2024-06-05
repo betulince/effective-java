@@ -19,7 +19,7 @@
  *
  * The better alternative is to use BuilderPattern:
  */
-public class NutritionFactsBuilderClass {
+public class NutritionFactsBuilder {
     private final int servingSize;
     private final int servings;
     private final int calories;
@@ -63,12 +63,12 @@ public class NutritionFactsBuilderClass {
             return this;
         }
 
-        public NutritionFactsBuilderClass build() {
-            return new NutritionFactsBuilderClass(this);
+        public NutritionFactsBuilder build() {
+            return new NutritionFactsBuilder(this);
         }
     }
 
-    private NutritionFactsBuilderClass(Builder builder) {
+    private NutritionFactsBuilder(Builder builder) {
         servingSize = builder.servingSize;
         servings = builder.servings;
         calories = builder.calories;
@@ -78,7 +78,7 @@ public class NutritionFactsBuilderClass {
     }
 
     public static void main(String[] args) {
-        NutritionFactsBuilderClass cocaCola = new Builder(240, 8)
+        NutritionFactsBuilder cocaCola = new Builder(240, 8)
                 .calories(100)
                 .sodium(35)
                 .carbohydrate(27)
