@@ -7,7 +7,6 @@ package singletonProperty;
  * Caveat:
  * a priviliged client can invoke the private constructor reflectively with the aid of AccessibleObject.setAccessible method.
  * if you need to defend against this attack, modify the constructor to make it throw an exception if it's asked to create a second instance.
- *
   */
 public class Elvis1 {
     public static final Elvis1 INSTANCE = new Elvis1();
