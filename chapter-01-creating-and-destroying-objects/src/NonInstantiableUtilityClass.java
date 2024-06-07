@@ -1,5 +1,5 @@
 public class NonInstantiableUtilityClass {
-    // Suppress default constructor for noninstantiability
+    // Suppress default constructor for non-instantiability
     private NonInstantiableUtilityClass() {
         throw new AssertionError();
     }

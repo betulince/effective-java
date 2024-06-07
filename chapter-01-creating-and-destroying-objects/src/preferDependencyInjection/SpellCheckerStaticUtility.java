@@ -3,7 +3,8 @@ package preferDependencyInjection;
 import java.util.ArrayList;
 import java.util.List;
 
-/*** This class provides utility methods related to spell checking without needing to be instantiated.
+/**
+ * This class provides utility methods related to spell checking without needing to be instantiated.
  * Assumes there is only one dictionary worth using. In practice, each language has its own dictionary,
  * and special dictionaries used for special vocabularies.
  * inflexable & untestable

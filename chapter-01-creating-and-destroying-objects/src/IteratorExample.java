@@ -3,7 +3,6 @@ import java.util.*;
 public class IteratorExample {
 
     public static void main(String[] args) {
-
         List<String> items = new ArrayList<>();
         items.add("Raspberry");
         items.add("Blackberry");

@@ -7,7 +7,7 @@ import java.util.Set;
 import static hierarchicalBuilderPattern.NyPizza.Size.*;
 import static hierarchicalBuilderPattern.Pizza.Topping.*;
 
-/***
+/**
  * abstract classes have abstract builders, concrete classes have concrete builders
  */
 public abstract class Pizza {
@@ -23,12 +23,12 @@ public abstract class Pizza {
     // Holds the toppings of a particular pizza instance
     final Set<Topping> toppings;
 
-    /***
+    /**
      * Pizza.Builder is a generic type with a recursive type parameter. This, along with the abstract self method, allows
      * method chaining to work properly in subclasses, without the need for casts.
       */
     abstract static class Builder<T extends Builder<T>> {
-        /***
+        /**
          * T must be subtype of Builder<T>
          * T has all the properties and methods of Builder<T>.
          * enabling method chaining and ensuring that methods in the builder return the correct type

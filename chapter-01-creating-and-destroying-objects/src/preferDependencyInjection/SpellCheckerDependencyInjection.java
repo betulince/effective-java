@@ -2,7 +2,8 @@ package preferDependencyInjection;
 
 import java.util.Objects;
 
-/*** What is required is the ability to support multiple instances of the class (SpellChecker), each of which uses the
+/**
+ * What is required is the ability to support multiple instances of the class (SpellChecker), each of which uses the
  * resource desired by the client (the dictionary).
  * A simple pattern that satisfies this requirement is to pass the resource into the constructor when creating a new
  * instance. This is one form of dependency injection: the dictionary is a dependency of the spell checker and is

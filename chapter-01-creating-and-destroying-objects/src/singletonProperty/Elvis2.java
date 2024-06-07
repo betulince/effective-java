@@ -1,6 +1,7 @@
 package singletonProperty;
 
-/*** Singleton with static factory
+/**
+ * Singleton with static factory
  * public member is a static factory method
  * all calls to Elvis2.getInstance return the same object reference, and no other Elvis instance will ever be created
  */

@@ -1,5 +1,4 @@
 public class StaticFactoryMethod {
-
     public static Boolean valueOf(boolean b) {
         // Static factory method which is simply a static method that returns an instance of the class
         return b ? Boolean.TRUE : Boolean.FALSE;
