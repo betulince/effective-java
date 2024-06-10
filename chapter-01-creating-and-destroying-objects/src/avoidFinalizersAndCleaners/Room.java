@@ -3,6 +3,16 @@ package avoidFinalizersAndCleaners;
 import java.lang.ref.Cleaner;
 
 /**
+ * What should you do instead of writing a finalizer or cleaner for a class whose objects encapsulate
+ * resources that require termination, such as files or threads? Just have your class implement
+ * AutoCloseable (ensures prompt release) and require its clients to invoke the close method on
+ * each instance when it is no longer needed, typically using try-with-resources to ensure termination
+ * even in the face of exceptions.
+ * finalizers/cleaners legitimate uses:
+ * 1. as a safety net
+ * some java library classes, such as FileInputStream, FileOutputStream, ThreadPoolExecutor, java.sql.Connection,
+ * have finalizers that serve as safety nets.
+ *
  * Let's assume that rooms must be cleaned before they are reclaimed.
  */
 public class Room implements AutoCloseable {
@@ -11,6 +21,7 @@ public class Room implements AutoCloseable {
     // Resource that requires cleaning. Must not refer to Room!
     private static class State implements Runnable {
         int numJunkPiles; // Resource that requires cleaning
+
         State(int numJunkPiles) {
             this.numJunkPiles = numJunkPiles;
         }
