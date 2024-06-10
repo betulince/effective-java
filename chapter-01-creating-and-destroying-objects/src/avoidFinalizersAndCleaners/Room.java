@@ -14,6 +14,9 @@ import java.lang.ref.Cleaner;
  * have finalizers that serve as safety nets.
  *
  * Let's assume that rooms must be cleaned before they are reclaimed.
+ *
+ * The code illustrates how to use the Cleaner class from the Java standard library to ensure that resources are
+ * properly released, even if the client forgets to call the close method.
  */
 public class Room implements AutoCloseable {
     private static final Cleaner cleaner = Cleaner.create();
@@ -68,3 +71,18 @@ public class Room implements AutoCloseable {
         }
     }
 }
+
+/**
+ * Does your class manage resources that need explicit cleanup (e.g., file handles, sockets)?
+ *
+ * Yes: Implement AutoCloseable and provide a close method.
+ * No: No need for special resource management.
+ * Is prompt release of the resource critical?
+ *
+ * Yes: Ensure clients use try-with-resources or explicitly call close.
+ * No: Consider using a cleaner as a safety net in addition to the close method.
+ * Can clients reliably be expected to call close?
+ *
+ * Yes: Rely on AutoCloseable and try-with-resources.
+ * No: Implement a cleaner as a safety net to handle missed close calls.
+ */
