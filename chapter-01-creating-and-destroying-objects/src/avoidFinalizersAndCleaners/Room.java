@@ -62,7 +62,7 @@ public class Room implements AutoCloseable {
         System.out.println("Room created with 10 junk piles.");
         anotherRoom = null;
 
-        System.gc();
+        // System.gc();
 
         try {
             Thread.sleep(1000);
